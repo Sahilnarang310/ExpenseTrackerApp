@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <h3>Expense Tracking</h3>
+    <div class="container">
+        <form onsubmit="saveExpense(event)">
+            <label for="amount" class="form-label" >Choose expense amount:</label>
+            <input type="text" id="amount" class="form-control" >
+            <label for="description" class="form-label" >Choose description:</label>
+            <input type="text" id="description" class="form-control" >
+            <label for="category" class="form-label" >Choose a category:</label>
+            <select class="form-select" id="category" >
+                <option>Fuel</option>
+                <option>Food</option>
+                <option>Electricity</option>
+                <option>Movies</option>
+                <option>Groceries</option>
+            </select>
+            <input type="submit" class="btn btn-dark" id = 'submit'>
+            <br>
+            
+        </form>
+        <h2>Expenses</h2>
+    </div>
+    <ul id="items" class="list-group" >
+    </ul> 
+    <div id="message"></div>
+    <button type="submit" class="btn btn-dark" id="buy premium">Buy Premium</button> 
+    <li id="leaderboard"></li>
+    <button onclick="download()" class="btn btn-dark" id="downloadexpense">Download File</button>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.2/axios.min.js"></script>
+
+<script src="expense.js" ></script>
+</body>
+</html>
